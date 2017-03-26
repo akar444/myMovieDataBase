@@ -1,2 +1,2 @@
-/*'use strict';
-angular.module('core.movies', ['ngResource']);*/
+'use strict';
+angular.module('core.movies', []);

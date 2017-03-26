@@ -3,13 +3,13 @@
 angular.module('movieList').
 	component('movieList', {
 		templateUrl: 'movieList/movieList.template.html',
-		controller: ['$http','orderByFilter', function movieListController($http, orderBy) {
+		controller: ['Movies','orderByFilter', function movieListController(Movies, orderBy) {
 			var self = this;
 			self.sortBy = 'rating';
-            $http.get('http://netflixroulette.net/api/api.php?director=Quentin').then(function(response) {
-		        self.movieList = response.data;
-		        self.showMovieInfo(0, 'rating');
-            });
+			Movies.then(function(response) {
+				self.movieList = response.data;
+				self.showMovieInfo(0, 'rating');
+			});
 	        self.showMovieInfo = function(index, sortBy) {
             	self.selectedIndex = index;
             	self.setMainImage(index, sortBy);

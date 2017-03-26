@@ -1,3 +1,3 @@
 angular.module('myMovieApp', [
-	'movieList'
+	'movieList', 'core'
 	]);

@@ -1,3 +1,3 @@
 angular.module('myMovieApp', [
-	'movieList', 'core'
+	'movieListView1', 'movieListView2', 'core', 'ngRoute'
 	]);

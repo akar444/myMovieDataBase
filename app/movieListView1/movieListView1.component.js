@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('movieList').
-	component('movieList', {
-		templateUrl: 'movieList/movieList.template.html',
+angular.module('movieListView1').
+	component('movieListView1', {
+		templateUrl: 'movieListView1/movieListView1.template.html',
 		controller: ['Movies','orderByFilter', function movieListController(Movies, orderBy) {
 			var self = this;
 			self.sortBy = 'rating';
